@@ -33289,6 +33289,48 @@ function OV(e, t) {
     }).format(i)
 }
 
+function CHwy() {
+    const {
+        lang: e
+    } = ht(), t = e === "ar" || e === "es";
+    return p.jsx("section", {
+        className: "section-padding bg-ivory relative overflow-hidden",
+        children: p.jsxs(z.div, {
+            initial: { opacity: 0, y: 24 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: !0, amount: .3 },
+            transition: { duration: 1.1, ease: [.25, 1, .5, 1] },
+            dir: t ? "rtl" : "ltr",
+            style: { maxWidth: "520px", margin: "0 auto", padding: "0 20px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" },
+            children: [p.jsx("p", {
+                className: t ? "" : "font-display",
+                style: t ? { fontFamily: "'Amiri', serif", fontSize: "1.6rem", color: "#CB632F", marginBottom: "22px" } : { fontSize: "clamp(1.9rem, 7vw, 2.4rem)", color: "#CB632F", marginBottom: "22px", lineHeight: 1.1 },
+                children: t ? "ومن هنا بدأت الحكاية" : "Where it all began"
+            }), p.jsx("div", {
+                style: { position: "relative", width: "min(300px, 74vw)", padding: "10px", borderRadius: "999px 999px 22px 22px", border: "1px solid hsl(var(--gold) / 0.45)" },
+                children: p.jsx("div", {
+                    style: { position: "relative", aspectRatio: "3 / 4", borderRadius: "999px 999px 16px 16px", overflow: "hidden", border: "1.5px solid hsl(var(--gold) / 0.85)", boxShadow: "0 18px 40px -18px rgba(79, 39, 28, 0.45)", background: "hsl(var(--off-white))" },
+                    children: p.jsx("img", {
+                        src: "assets/l5e-images/childhood.jpg?v=wy20261007",
+                        alt: t ? "وليد وياسمين وهما صغيرين" : "Waleed and Yasmin as children",
+                        loading: "lazy",
+                        style: { width: "100%", height: "100%", objectFit: "cover", objectPosition: "50% 72%", display: "block" }
+                    })
+                })
+            }), p.jsx("p", {
+                className: t ? "" : "font-serif italic",
+                style: t ? { fontFamily: "'Amiri', serif", fontSize: "1.15rem", color: "hsl(var(--plum))", marginTop: "22px" } : { fontSize: "1.15rem", color: "hsl(var(--plum))", marginTop: "22px" },
+                children: t ? "…والحكاية مكملة" : "…and the story continues"
+            }), p.jsx("svg", {
+                viewBox: "0 0 24 24",
+                "aria-hidden": !0,
+                style: { width: "14px", height: "14px", marginTop: "10px", fill: "#CB632F" },
+                children: p.jsx("path", { d: "M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.9 1.3 5.3 3.2 1.4-1.9 3.1-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z" })
+            })]
+        })
+    })
+}
+
 function IV({
     name1: e,
     name2: t,
@@ -34200,7 +34242,7 @@ const nz = "4eb245b4-1929-45cc-b854-c19be74b61fc",
                     endTime: "00:00"
                 }), p.jsx(uL, {
                     targetDate: c.wedding_date
-                }), p.jsx(xL, {}), p.jsx(DCwy, {}), p.jsx(DF, {}),  p.jsx(_V, {}), p.jsx(IV, {
+                }), p.jsx(xL, {}), p.jsx(DCwy, {}), p.jsx(DF, {}), p.jsx(_V, {}), p.jsx(CHwy, {}), p.jsx(IV, {
                     name1: c.couple_name_1,
                     name2: c.couple_name_2,
                     date: c.wedding_date
