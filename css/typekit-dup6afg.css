@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Pinyon+Script&family=Great+Vibes&family=Alex+Brush&display=swap');
+@import url("https://p.typekit.net/p.css?s=1&k=dup6afg&ht=tk&f=44311.57139&a=88056013&app=typekit&e=css");
+
+
+@font-face {
+  font-family: 'Symphonie Calligraphy';
+  src: url('../assets/fonts/SymphonieCalligraphyDEMO-Regular.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Snell Roundhand';
+  src: local('Snell Roundhand'), local('SnellRoundhand'), local('Snell Roundhand Script'), local('SnellRoundhand-Regular'), url('https://db.onlinewebfonts.com/t/df4754685930776b91c0d756294352b1.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Snell Roundhand Script';
+  src: local('Snell Roundhand'), local('SnellRoundhand'), local('Snell Roundhand Script'), local('SnellRoundhand-Regular'), url('https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SnellRoundhand-Regular';
+  src: local('Snell Roundhand'), local('SnellRoundhand'), local('Snell Roundhand Script'), local('SnellRoundhand-Regular'), url('https://db.onlinewebfonts.com/t/df4754685930776b91c0d756294352b1.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'Bickham Script Pro';
+  src: local('Bickham Script Pro'), local('BickhamScriptPro-Regular'), local('Bickham Script'), url('https://fonts.gstatic.com/s/pinyonscript/v22/6xKtdSBYb9b-nJOYCn4yciH21WK7.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bickham Script';
+  src: local('Bickham Script Pro'), local('BickhamScriptPro-Regular'), local('Bickham Script'), url('https://fonts.gstatic.com/s/pinyonscript/v22/6xKtdSBYb9b-nJOYCn4yciH21WK7.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * classic-script-mn:
+ *   - http://typekit.com/eulas/00000000000000007755955c
+ * span:
+ *   - http://typekit.com/eulas/00000000000000007735c8d2
+ *
+ * © 2009-2026 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2026-03-06 22:18:14 UTC"}*/
+
+
+@font-face {
+font-family:"span";
+src:url("https://use.typekit.net/af/c5aa0d/00000000000000007735c8d2/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff2"),url("https://use.typekit.net/af/c5aa0d/00000000000000007735c8d2/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("woff"),url("https://use.typekit.net/af/c5aa0d/00000000000000007735c8d2/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:200;font-stretch:normal;
+}
+
+@font-face {
+font-family:"classic-script-mn";
+src:url("https://use.typekit.net/af/a8c1bc/00000000000000007755955c/31/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/a8c1bc/00000000000000007755955c/31/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/a8c1bc/00000000000000007755955c/31/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+.tk-span { font-family: "span",serif; }
+.tk-classic-script-mn { font-family: "classic-script-mn",sans-serif; }
+
+@font-face {
+  font-family: 'Symphonie Calligraphy';
+  src: url('../assets/fonts/SymphonieCalligraphyDEMO-Regular.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Kaman';
+  src: url('../assets/fonts/kaman-Regular.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5 *, h6, h6 *,
+.font-display, .font-display *, .font-script, .font-script *, .font-signature, .font-signature *,
+[dir="ltr"] h1, [dir="ltr"] h1 *, [dir="ltr"] h2, [dir="ltr"] h2 *, [dir="ltr"] h3, [dir="ltr"] h3 *,
+[dir="ltr"] h4, [dir="ltr"] h4 *, [dir="ltr"] h5, [dir="ltr"] h5 *, [dir="ltr"] h6, [dir="ltr"] h6 *,
+[dir="ltr"] .font-display, [dir="ltr"] .font-display *, [dir="ltr"] .font-script, [dir="ltr"] .font-script *,
+[dir="ltr"] .font-signature, [dir="ltr"] .font-signature * {
+  font-family: 'Symphonie Calligraphy', 'Snell Roundhand', 'Snell Roundhand Script', 'SnellRoundhand-Regular', cursive, serif !important;
+}
+
+[dir="rtl"] h1, [dir="rtl"] h1 *, [dir="rtl"] h2, [dir="rtl"] h2 *, [dir="rtl"] h3, [dir="rtl"] h3 *,
+[dir="rtl"] h4, [dir="rtl"] h4 *, [dir="rtl"] h5, [dir="rtl"] h5 *, [dir="rtl"] h6, [dir="rtl"] h6 *,
+[dir="rtl"] .font-display, [dir="rtl"] .font-display *, [dir="rtl"] .font-script, [dir="rtl"] .font-script *,
+[dir="rtl"] .font-signature, [dir="rtl"] .font-signature * {
+  font-family: 'Kaman', 'Amiri', 'Cairo', cursive, serif !important;
+}

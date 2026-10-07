@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Alex+Brush&display=swap');
+
+@font-face {
+  font-family: 'Snell Roundhand';
+  src: local('Snell Roundhand'), local('SnellRoundhand'), local('Snell Roundhand Script'), local('SnellRoundhand-Regular'), url('https://db.onlinewebfonts.com/t/df4754685930776b91c0d756294352b1.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Snell Roundhand Script';
+  src: local('Snell Roundhand'), local('SnellRoundhand'), local('Snell Roundhand Script'), local('SnellRoundhand-Regular'), url('https://db.onlinewebfonts.com/t/31ed0189fe1ff1e740a652e0f75b77dc.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SnellRoundhand-Regular';
+  src: local('Snell Roundhand'), local('SnellRoundhand'), local('Snell Roundhand Script'), local('SnellRoundhand-Regular'), url('https://db.onlinewebfonts.com/t/df4754685930776b91c0d756294352b1.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Pinyon+Script&family=Great+Vibes&family=Alex+Brush&display=swap');
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Great+Vibes&family=Alex+Brush&display=swap');
+
+@font-face {
+  font-family: 'Bickham Script Pro';
+  src: local('Bickham Script Pro'), local('BickhamScriptPro-Regular'), local('Bickham Script'), url('https://fonts.gstatic.com/s/pinyonscript/v22/6xKtdSBYb9b-nJOYCn4yciH21WK7.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bickham Script';
+  src: local('Bickham Script Pro'), local('BickhamScriptPro-Regular'), local('Bickham Script'), url('https://fonts.gstatic.com/s/pinyonscript/v22/6xKtdSBYb9b-nJOYCn4yciH21WK7.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/**/
