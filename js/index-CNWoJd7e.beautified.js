@@ -22233,7 +22233,7 @@ const d8 = 1,
         content_type: y8,
         created_at: w8
     },
-    rw = "assets/l5e-images/amira_png.jpg?v=hero20260729";
+    rw = "assets/l5e-images/amira_png.jpg?v=wy20261007";
 
 function x8(e, t) {
     const [n, r, s] = e.split("-").map(Number), i = new Date(Date.UTC(n, r - 1, s));
