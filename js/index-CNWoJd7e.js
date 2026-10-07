@@ -33074,7 +33074,7 @@ function _V() {
                         message: d.trim() || void 0,
                         website: m
                     });
-                } catch(errSupa) {}
+                } catch(errSupa) { console.error("RSVP save error:", errSupa); throw errSupa }
                 n(!0)
             } catch (E) {
                 const k = E instanceof Error && E.message ? E.message : e("rsvp.err.errDesc");
