@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amira & Mohamed — RSVP Guest Dashboard</title>
+    <title>Waleed & Yasmin — RSVP Guest Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --plum: #2A1822;
-            --plum-light: #3D2331;
-            --ivory: #FAF8F5;
-            --ivory-dark: #F2ECE1;
-            --gold: #D4AF37;
-            --gold-light: #F3E5AB;
-            --gold-dark: #A68523;
+            --plum: #301918;
+            --plum-light: #4F271C;
+            --ivory: #F8F4EC;
+            --ivory-dark: #EFE7D8;
+            --gold: #6B7240;
+            --gold-light: #DCDDBF;
+            --gold-dark: #4F5530;
             --success: #10B981;
             --danger: #EF4444;
             --card-bg: rgba(255, 255, 255, 0.85);
@@ -541,7 +541,7 @@
             <div class="title-area">
                 <h1>
                     <span>💍</span>
-                    <span>Amira & Mohamed — RSVP Dashboard</span>
+                    <span>Waleed & Yasmin — RSVP Dashboard</span>
                 </h1>
                 <p>Real-time guest attendance tracking and RSVP responses</p>
             </div>
@@ -598,7 +598,7 @@
         <!-- Settings Panel -->
         <div id="settings-panel" class="settings-panel">
             <h4>⚙️ Global Cloud Database Settings (JSONBlob)</h4>
-            <p>All RSVP responses are stored automatically in a permanent cloud database for Amira & Mohamed's wedding, alongside a local backup in your browser.</p>
+            <p>All RSVP responses are stored automatically in a permanent cloud database for Waleed & Yasmin's wedding, alongside a local backup in your browser.</p>
             <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
                 <input type="text" id="db-url-input" placeholder="Cloud Database URL (Endpoint)" style="flex: 1; min-width: 280px; padding: 0.65rem 1rem; border-radius: 0.5rem; border: 1px solid #D6CBD0;">
                 <button onclick="saveCustomDb()" class="btn btn-gold">Save Settings</button>
@@ -709,7 +709,7 @@
     </div>
 
     <script>
-        // Dedicated permanent Cloud Database URL for Amira & Mohamed wedding RSVPs
+        // Dedicated permanent Cloud Database URL for Waleed & Yasmin wedding RSVPs
         const DEFAULT_DB_URL = "https://jsonblob.com/api/jsonBlob/019fbcea-2021-7333-9dce-a4077ddee73d";
 
         function getDbUrl() {
@@ -920,7 +920,7 @@
             const link = document.createElement('a');
             const url = URL.createObjectURL(blob);
             link.setAttribute('href', url);
-            link.setAttribute('download', `Amira-Mohamed-RSVPs-${new Date().toISOString().slice(0, 10)}.csv`);
+            link.setAttribute('download', `Waleed-Yasmin-RSVPs-${new Date().toISOString().slice(0, 10)}.csv`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

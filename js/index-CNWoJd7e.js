@@ -21865,7 +21865,7 @@ const l8 = {
         "ui.muted": "Unmute",
         "ui.unmuted": "Mute",
         "hero.subtitle": "We are getting married",
-        "hero.location": "Ociel hall, Talkha City, Mansoura, Dakahlia Governorate, Egypt | 7:00 PM – 12:00 AM",
+        "hero.location": "Alturath Hall | 7:30 PM – 12:00 AM",
         "intro.tap": "Tap to open",
         "intro.loading": "Loading…",
         "intro.envelopeAlt": "Invitation envelope with wax seal",
@@ -21878,11 +21878,11 @@ Our Wedding
 special day with you.
 `,
         "welcome.p2": "",
-        "welcome.rsvpBy": "Please RSVP by 28 August 2026.",
-        "welcome.time": "7:00 PM – 12:00 AM",
+        "welcome.rsvpBy": "Please RSVP by 18 October 2026.",
+        "welcome.time": "7:30 PM – 12:00 AM",
         "countdown.kicker": "",
         "countdown.title": "Countdown",
-        "countdown.subtitle": "Until 28 August 2026",
+        "countdown.subtitle": "Until 18 October 2026",
         "countdown.days": "Days",
         "countdown.hours": "Hours",
         "countdown.minutes": "Minutes",
@@ -21890,7 +21890,7 @@ special day with you.
         "details.kicker": "",
         "details.title": "Time & Location",
         "details.invited": "Join us at",
-        "details.time": "7:00 PM – 12:00 AM",
+        "details.time": "7:30 PM – 12:00 AM",
         "details.timeRange": "From {{start}} until {{end}}",
         "details.openMaps": "Open in Google Maps",
         "details.addCalendar": "Add to Calendar",
@@ -21899,7 +21899,7 @@ special day with you.
         "schedule.ceremony.time": "12:00 PM",
         "schedule.ceremony.title": "Ceremony",
         "schedule.ceremony.desc": "Garden ceremony",
-        "schedule.reception.time": "7:00 PM – 12:00 AM",
+        "schedule.reception.time": "7:30 PM – 12:00 AM",
         "schedule.reception.title": "Reception",
         "schedule.reception.desc": "Dinner and dancing",
         "dress.title": "Dress Code",
@@ -21964,7 +21964,7 @@ VILLAGES & LANDMARKS`,
         "rsvp.kicker": "",
         "rsvp.title": "RSVP",
         "rsvp.deadline.before": "Please respond by ",
-        "rsvp.deadline.date": "28 August 2026",
+        "rsvp.deadline.date": "18 October 2026",
         "rsvp.deadline.after": ".",
         "rsvp.attend": "Will you attend? *",
         "rsvp.yes": "Yes, I'll be there",
@@ -22009,13 +22009,13 @@ VILLAGES & LANDMARKS`,
         "rsvp.err.errDesc": "Could not submit your RSVP. Please try again.",
         "conf.no.title": "Thank you for letting us know",
         "conf.no.body": "We're sorry you can't join us. You'll be in our thoughts on this very special day.",
-        "conf.signature": "— Mohamed & Amira",
+        "conf.signature": "— Waleed & Yasmin",
         "conf.yes.title": "Thank you for confirming",
         "conf.yes.p1": "We're so happy you'll be joining us.",
         "conf.yes.p2": "",
-        "conf.yes.p3": "We look forward to seeing you on August 28th at Ociel hall, Talkha City, Mansoura, Dakahlia Governorate, Egypt.",
+        "conf.yes.p3": "We look forward to seeing you on October 18th at Alturath Hall.",
         "conf.addCal": "Add to Calendar",
-        "conf.cancelNote": "If you can no longer attend, please let us know before 28 August.",
+        "conf.cancelNote": "If you can no longer attend, please let us know before 18 October.",
         "footer.madeBy": "Made with love by"
     },
     c8 = {
@@ -22025,7 +22025,7 @@ VILLAGES & LANDMARKS`,
         "ui.muted": "تشغيل الصوت",
         "ui.unmuted": "كتم الصوت",
         "hero.subtitle": "حفل زفافنا",
-        "hero.location": "قاعة أوسيل، طلخا، المنصورة، محافظة الدقهلية، مصر | 7:00 مساءً – 12:00 منتصف الليل",
+        "hero.location": "قاعة التراث | 7:30 مساءً – 12:00 منتصف الليل",
         "intro.tap": "اضغط للفتح",
         "intro.loading": "جاري التحميل…",
         "intro.envelopeAlt": "ظرف دعوة زفاف",
@@ -22034,11 +22034,11 @@ VILLAGES & LANDMARKS`,
         "welcome.title2": "",
         "welcome.p1": "تكتمل فرحتنا بحضوركم ومشاركتكم لنا في هذا اليوم المميز.",
         "welcome.p2": "",
-        "welcome.rsvpBy": "يرجى تأكيد الحضور قبل 28 أغسطس 2026.",
-        "welcome.time": "7:00 مساءً – 12:00 منتصف الليل",
+        "welcome.rsvpBy": "يرجى تأكيد الحضور قبل 18 أكتوبر 2026.",
+        "welcome.time": "7:30 مساءً – 12:00 منتصف الليل",
         "countdown.kicker": "",
         "countdown.title": "العد التنازلي",
-        "countdown.subtitle": "حتى 28 أغسطس 2026",
+        "countdown.subtitle": "حتى 18 أكتوبر 2026",
         "countdown.days": "أيام",
         "countdown.hours": "ساعات",
         "countdown.minutes": "دقائق",
@@ -22046,7 +22046,7 @@ VILLAGES & LANDMARKS`,
         "details.kicker": "",
         "details.title": "الزمان والمكان",
         "details.invited": "ننتظركم في",
-        "details.time": "7:00 مساءً – 12:00 منتصف الليل",
+        "details.time": "7:30 مساءً – 12:00 منتصف الليل",
         "details.timeRange": "من {{start}} إلى {{end}}",
         "details.openMaps": "فتح في خرائط جوجل",
         "details.addCalendar": "إضافة إلى التقويم",
@@ -22055,7 +22055,7 @@ VILLAGES & LANDMARKS`,
         "schedule.ceremony.time": "12:00",
         "schedule.ceremony.title": "مراسم الزفاف",
         "schedule.ceremony.desc": "مراسم الزفاف في الحديقة",
-        "schedule.reception.time": "7:00 مساءً",
+        "schedule.reception.time": "7:30 مساءً",
         "schedule.reception.title": "حفل الزفاف",
         "schedule.reception.desc": "عشاء واحتفال",
         "dress.title": "قواعد المظهر",
@@ -22119,7 +22119,7 @@ VILLAGES & LANDMARKS`,
         "rsvp.kicker": "",
         "rsvp.title": "تأكيد الحضور",
         "rsvp.deadline.before": "يرجى الرد قبل ",
-        "rsvp.deadline.date": "28 أغسطس 2026",
+        "rsvp.deadline.date": "18 أكتوبر 2026",
         "rsvp.deadline.after": ".",
         "rsvp.attend": "هل ستحضر؟ *",
         "rsvp.yes": "نعم، سأحضر بكل سرور",
@@ -22164,13 +22164,13 @@ VILLAGES & LANDMARKS`,
         "rsvp.err.errDesc": "تعذر إرسال التأكيد. يرجى المحاولة مرة أخرى.",
         "conf.no.title": "شكراً لإعلامنا",
         "conf.no.body": "نعتذر لعدم تمكنكم من الحضور، ستكونون في قلوبنا في هذا اليوم المميز.",
-        "conf.signature": "— محمد وأميرة",
+        "conf.signature": "— وليد وياسمين",
         "conf.yes.title": "شكراً لتأكيد حضوركم",
         "conf.yes.p1": "يسعدنا جداً حضوركم ومشاركتنا فرحتنا.",
         "conf.yes.p2": "",
-        "conf.yes.p3": "ننتظركم يوم 28 أغسطس في قاعة أوسيل، طلخا، المنصورة، محافظة الدقهلية، مصر.",
+        "conf.yes.p3": "ننتظركم يوم 18 أكتوبر في قاعة التراث.",
         "conf.addCal": "إضافة إلى التقويم",
-        "conf.cancelNote": "إذا تعذر عليكم الحضور لاحقاً، يرجى إعلامنا قبل 28 أغسطس.",
+        "conf.cancelNote": "إذا تعذر عليكم الحضور لاحقاً، يرجى إعلامنا قبل 18 أكتوبر.",
         "footer.madeBy": "صنع بكل حب بواسطة"
     },
     nw = {
@@ -22347,7 +22347,7 @@ function _8({
                     })
                 }), p.jsxs("div", {
                     className: "relative z-10 px-8 md:px-12 pt-10 md:pt-14 flex flex-col items-center",
-                    children: [o === "ar" || o === "es" ? p.jsx(z.img, {
+                    children: [o === "ar" || o === "es" ? p.jsxs(z.div, {
                         initial: {
                             opacity: 0,
                             y: 15
@@ -22360,9 +22360,18 @@ function _8({
                             duration: 1.1,
                             delay: .8
                         },
-                        src: "assets/l5e-images/into_amira.svg?v=2",
-                        alt: "حفل زفاف أميرة و محمد",
-                        className: "w-[95%] max-w-[460px] h-auto mt-[60%] mb-2 mx-auto object-contain drop-shadow-[0_2px_18px_rgba(255,255,255,0.55)]"
+                        dir: "rtl",
+                        style: { fontFamily: "'Amiri', serif", marginTop: "38%", marginBottom: "0.5rem", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", filter: "drop-shadow(0 2px 18px rgba(255,255,255,0.7))" },
+                        children: [p.jsx("p", {
+                            style: { fontFamily: "'Amiri', serif", fontSize: "clamp(1rem,3.6vw,1.25rem)", color: "hsl(var(--plum))", marginBottom: "1rem", lineHeight: 1.7 },
+                            children: "بارك الله لكما وبارك عليكما وجمع بينكما في خير"
+                        }), p.jsxs("h1", {
+                            style: { fontFamily: "'Amiri', serif", fontSize: "clamp(2.8rem,10vw,5.5rem)", lineHeight: 1.15, color: "hsl(var(--dusty-blue))", fontWeight: 400 },
+                            children: ["وليد", p.jsx("span", { style: { display: "block", fontSize: "0.45em", margin: "0.15em 0", color: "hsl(var(--plum))" }, children: "و" }), "ياسمين"]
+                        }), p.jsx("p", {
+                            style: { fontFamily: "'Amiri', serif", marginTop: "1rem", fontSize: "clamp(1rem,3.6vw,1.15rem)", color: "#000", fontWeight: 600 },
+                            children: x8(n, o)
+                        })]
                     }) : null, o === "ar" || o === "es" ? null : p.jsx(z.p, {
                         initial: {
                             opacity: 0,
@@ -22546,39 +22555,18 @@ const S8 = "2b66b518-489b-4982-af38-67ec60286a6d",
 
 function B8({
     date: e,
-    location: t = "Ociel hall, Talkha City, Mansoura, Dakahlia Governorate, Egypt",
+    location: t = "Alturath Hall",
     address: n,
     mapsUrl: r,
-    startTime: s = "19:00",
+    startTime: s = "19:30",
     endTime: i = "02:00"
 }) {
     const {
         t: o
-    } = ht(), a = o("welcome.kicker"), l = o("welcome.title2"), c = o("welcome.p2"), u = (s === "ar" || s === "es") ? "قاعة أوسيل، طلخا، المنصورة، محافظة الدقهلية، مصر" : (t || "Ociel hall, Talkha City, Mansoura, Dakahlia Governorate, Egypt"), d = r || "https://maps.app.goo.gl/CLuTgs5QUp5Kztyy7?g_st=ai";
+    } = ht(), a = o("welcome.kicker"), l = o("welcome.title2"), c = o("welcome.p2"), u = (s === "ar" || s === "es") ? "قاعة التراث" : (t || "Alturath Hall"), d = r || "https://maps.app.goo.gl/eDZW7yBgbjk415DVA?g_st=ii";
     return p.jsxs("section", {
         className: "relative overflow-hidden bg-[hsl(var(--ivory))] py-8 md:py-12",
-        children: [p.jsx("div", {
-            className: "relative z-10 max-w-2xl mx-auto text-center px-4 pt-10 md:pt-16",
-            children: p.jsx(z.img, {
-                src: U8.url,
-                alt: "Château illustration",
-                initial: {
-                    opacity: 0,
-                    y: -16
-                },
-                whileInView: {
-                    opacity: 1,
-                    y: 0
-                },
-                viewport: {
-                    once: !0
-                },
-                transition: {
-                    duration: 1
-                },
-                className: "w-64 md:w-80 max-h-[440px] object-contain rounded-2xl mx-auto mb-4 drop-shadow-[0_4px_24px_rgba(214,198,166,0.65)]"
-            })
-        }), p.jsxs("div", {
+        children: [p.jsxs("div", {
             className: "relative max-w-2xl mx-auto px-4 md:px-6",
             children: [p.jsx("div", {
                 className: "absolute inset-0",
@@ -22718,7 +22706,7 @@ const z8 = "4bc58cfa-4988-4f35-9b58-1b885a62888e",
     q8 = "cc720d6a-88ef-4db6-82b2-9219d43a20b8",
     G8 = "a/v1/cc720d6a-88ef-4db6-82b2-9219d43a20b8/4bc58cfa-4988-4f35-9b58-1b885a62888e/countdown-drape-left.png",
     Q8 = 409899,
-    Y8 = "assets/l5e-images/countdown-drape-left.png?v=drape20260801_left",
+    Y8 = "assets/l5e-images/countdown-drape-left.png?v=wy20261007",
     J8 = 1,
     X8 = {
         asset_id: z8,
@@ -22738,7 +22726,7 @@ const z8 = "4bc58cfa-4988-4f35-9b58-1b885a62888e",
     rL = "cc720d6a-88ef-4db6-82b2-9219d43a20b8",
     sL = "a/v1/cc720d6a-88ef-4db6-82b2-9219d43a20b8/17fb6033-2b28-443c-ab93-0925df2dbd96/countdown-drape-right.png",
     iL = 414709,
-    oL = "assets/l5e-images/countdown-drape-right.png?v=drape20260727",
+    oL = "assets/l5e-images/countdown-drape-right.png?v=wy20261007",
     aL = 1,
     lL = {
         asset_id: Z8,
@@ -22754,7 +22742,7 @@ const z8 = "4bc58cfa-4988-4f35-9b58-1b885a62888e",
 
 function cL(e) {
     const [t, n, r] = e.split("-").map(Number);
-    return Date.UTC(t, n - 1, r, 15, 0, 0)
+    return Date.UTC(t, n - 1, r, 16, 30, 0)
 }
 
 function uL({
@@ -22913,7 +22901,7 @@ function uL({
                 transition: {
                     duration: .7
                 },
-                className: "font-display text-5xl md:text-7xl text-[hsl(var(--plum))] mb-2 drop-shadow-[0_2px_18px_rgba(139,165,184,0.25)]",
+                className: "font-display text-5xl md:text-7xl text-[hsl(var(--plum))] mb-2 drop-shadow-[0_2px_18px_rgba(203,99,47,0.2)]",
                 children: t("countdown.title")
             }), p.jsx(z.p, {
                 initial: {
@@ -22988,7 +22976,7 @@ const dL = "ed62a578-1b0c-4fe9-bd98-5c72e42ea515",
     mL = "cc720d6a-88ef-4db6-82b2-9219d43a20b8",
     gL = "a/v1/cc720d6a-88ef-4db6-82b2-9219d43a20b8/ed62a578-1b0c-4fe9-bd98-5c72e42ea515/fan.png",
     vL = 86740,
-    yL = "assets/l5e-images/fan.png?v=fan20260727",
+    yL = "assets/l5e-images/fan.png?v=wy20261007",
     wL = 1,
     bL = {
         asset_id: dL,
@@ -23001,6 +22989,194 @@ const dL = "ed62a578-1b0c-4fe9-bd98-5c72e42ea515",
         url: yL,
         version: wL
     };
+
+const TLwyIcons = {
+    arrival: [
+        "M18 56V30a14 14 0 0 1 28 0v26",
+        "M24 56V32a8 8 0 0 1 16 0v24",
+        "M10 56h44",
+        "M36 45.5h.01",
+        "M32 9.2c-1.2-1.6-4-1.2-4 .8 0 2 4 4.2 4 4.2s4-2.2 4-4.2c0-2-2.8-2.4-4-.8z"
+    ],
+    ceremony: [
+        "M26 26a13 13 0 1 0 0 26 13 13 0 1 0 0-26z",
+        "M40 26a13 13 0 1 0 0 26 13 13 0 1 0 0-26z",
+        "M21 18h10l-5 7z",
+        "M23 14h6l2 4H21z",
+        "M14 12l-2-2M38 12l2-2M12 20H9M41 20h3"
+    ],
+    dinner: [
+        "M34 18a15 15 0 1 0 0 30 15 15 0 1 0 0-30z",
+        "M34 23a10 10 0 1 0 0 20 10 10 0 1 0 0-20z",
+        "M8 14v8M11 14v8M14 14v8M8 22a3 3 0 0 0 6 0M11 25v25",
+        "M58 50V14c-4 4-5 12-1 17"
+    ],
+    night: [
+        "M36 12a20 20 0 1 0 16 32A17 17 0 1 1 36 12z",
+        "M14 12l1.4 3.6L19 17l-3.6 1.4L14 22l-1.4-3.6L9 17l3.6-1.4z",
+        "M52 10l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z",
+        "M50 30h.01M10 36h.01"
+    ]
+};
+const TLwyItems = [
+    { icon: "arrival", en: ["7:30 PM", "Guest Arrival"], ar: ["7:30 مساءً", "استقبال الضيوف"] },
+    { icon: "ceremony", en: ["8:00 PM", "The Ceremony"], ar: ["8:00 مساءً", "مراسم الزفاف"] },
+    { icon: "dinner", en: ["10:00 PM", "Dinner"], ar: ["10:00 مساءً", "العشاء"] },
+    { icon: "night", en: ["12:00 AM", "End of the Night"], ar: ["12:00 منتصف الليل", "ختام الليلة"] }
+];
+
+function TLwy({
+    isAr: e
+}) {
+    return p.jsxs("div", {
+        dir: e ? "rtl" : "ltr",
+        style: { position: "relative", width: "100%", maxWidth: "440px", margin: "0 auto" },
+        children: [p.jsx("div", {
+            "aria-hidden": !0,
+            style: { position: "absolute", top: "52px", bottom: "52px", left: "50%", width: "1.5px", transform: "translateX(-50%)", background: "hsl(var(--gold) / 0.7)" }
+        }), TLwyItems.map((t, n) => p.jsxs(z.div, {
+            initial: { opacity: 0, y: 16 },
+            whileInView: { opacity: 1, y: 0 },
+            viewport: { once: !0, amount: .6 },
+            transition: { duration: .7, delay: n * .12 },
+            style: { display: "grid", gridTemplateColumns: "1fr 28px 1fr", alignItems: "center", padding: "14px 0" },
+            children: [p.jsx("div", {
+                style: { justifySelf: "end", paddingInlineEnd: "22px", color: "hsl(var(--plum) / 0.85)" },
+                children: p.jsx("svg", {
+                    viewBox: "0 0 64 64",
+                    fill: "none",
+                    stroke: "currentColor",
+                    strokeWidth: 1.6,
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    "aria-hidden": !0,
+                    style: { width: "clamp(56px,16vw,76px)", height: "auto", display: "block" },
+                    children: TLwyIcons[t.icon].map((r, s) => p.jsx("path", { d: r }, s))
+                })
+            }), p.jsx("div", {
+                style: { display: "flex", justifyContent: "center", position: "relative", zIndex: 1 },
+                children: p.jsx("svg", {
+                    viewBox: "0 0 24 24",
+                    "aria-hidden": !0,
+                    style: { width: "16px", height: "16px", display: "block", fill: "hsl(var(--plum))" },
+                    children: p.jsx("path", { d: "M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.7 4.5c2.2 0 3.9 1.3 5.3 3.2 1.4-1.9 3.1-3.2 5.3-3.2 3.7 0 5.8 3.9 4.3 7.3C19.5 16.4 12 21 12 21z" })
+                })
+            }), p.jsxs("div", {
+                style: { paddingInlineStart: "22px", textAlign: "start" },
+                children: [p.jsx("p", {
+                    className: "font-serif italic",
+                    style: { fontSize: "clamp(1.05rem,4vw,1.3rem)", color: "hsl(var(--gold))", marginBottom: "2px", whiteSpace: "nowrap" },
+                    children: (e ? t.ar : t.en)[0]
+                }), p.jsx("p", {
+                    className: "font-serif",
+                    style: { fontSize: "clamp(0.85rem,3.2vw,1rem)", fontWeight: 600, letterSpacing: e ? "0" : "0.14em", textTransform: "uppercase", color: "hsl(var(--plum))", lineHeight: 1.35 },
+                    children: (e ? t.ar : t.en)[1]
+                })]
+            })]
+        }, t.icon))]
+    })
+}
+
+const DCwyColors = [
+    ["Tuscany", "توسكاني", "#CB632F"],
+    ["Paarl", "بارل", "#A65330"],
+    ["Red Robin", "ريد روبن", "#833922"],
+    ["Cocoa Bean", "كاكاو", "#4F271C"],
+    ["Eclipse", "إكليبس", "#301918"]
+];
+const DCwyIcons = {
+    ladies: ["M27 6l1 8M37 6l-1 8", "M28 14h8l2 10H26z", "M26 24L14 56h36L38 24", "M22 42c6 2 14 2 20 0"],
+    gents: ["M20 10l12 10 12-10 10 6v40H10V16z", "M20 10l6 24 6-14 6 14 6-24", "M28 16l4 3 4-3v6l-4-3-4 3z", "M32 40h.01M32 48h.01"]
+};
+
+function DCwySwatch({
+    color: e,
+    label: t
+}) {
+    return p.jsxs("div", {
+        style: { display: "flex", flexDirection: "column", alignItems: "center", width: "64px" },
+        children: [p.jsx("span", {
+            "aria-hidden": !0,
+            style: { width: "46px", height: "46px", borderRadius: "9999px", background: e, boxShadow: "0 2px 8px rgba(0,0,0,0.18), inset 0 0 0 2px rgba(255,255,255,0.35)" }
+        }), p.jsx("span", {
+            className: "font-serif",
+            style: { marginTop: "8px", fontSize: "0.72rem", lineHeight: 1.25, color: "hsl(var(--plum))", textAlign: "center" },
+            children: t
+        })]
+    })
+}
+
+function DCwyCard({
+    icon: e,
+    title: t,
+    note: n,
+    children: r,
+    delay: s
+}) {
+    return p.jsxs(z.div, {
+        initial: { opacity: 0, y: 20 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: !0, amount: .4 },
+        transition: { duration: .7, delay: s },
+        style: { flex: "1 1 280px", maxWidth: "400px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", padding: "28px 20px", borderRadius: "18px", border: "1px solid hsl(var(--gold) / 0.35)", background: "hsl(var(--ivory) / 0.6)", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" },
+        children: [p.jsx("svg", {
+            viewBox: "0 0 64 64",
+            fill: "none",
+            stroke: "currentColor",
+            strokeWidth: 1.6,
+            strokeLinecap: "round",
+            strokeLinejoin: "round",
+            "aria-hidden": !0,
+            style: { width: "60px", height: "60px", color: "hsl(var(--plum) / 0.85)", marginBottom: "10px" },
+            children: DCwyIcons[e].map((i, o) => p.jsx("path", { d: i }, o))
+        }), p.jsx("h3", {
+            className: "font-display",
+            style: { fontSize: "1.6rem", color: "hsl(var(--plum))", marginBottom: "4px" },
+            children: t
+        }), p.jsx("p", {
+            className: "font-serif italic",
+            style: { fontSize: "1rem", color: "hsl(var(--plum) / 0.85)", marginBottom: "20px" },
+            children: n
+        }), p.jsx("div", {
+            style: { display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "12px 8px" },
+            children: r
+        })]
+    })
+}
+
+function DCwy() {
+    const {
+        lang: e
+    } = ht(), t = e === "ar" || e === "es";
+    return p.jsx("section", {
+        className: "section-padding bg-ivory relative overflow-hidden",
+        children: p.jsxs("div", {
+            dir: t ? "rtl" : "ltr",
+            style: { maxWidth: "880px", margin: "0 auto", padding: "0 20px", display: "flex", flexDirection: "column", alignItems: "center" },
+            children: [p.jsx("h2", {
+                className: "font-display text-3xl md:text-4xl text-[hsl(var(--plum))] mb-3",
+                children: t ? "قواعد اللباس" : "Dress Code"
+            }), p.jsx("div", {
+                className: "gold-rule mx-auto mb-8"
+            }), p.jsxs("div", {
+                style: { display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px", width: "100%" },
+                children: [p.jsx(DCwyCard, {
+                    icon: "ladies",
+                    title: t ? "السيدات" : "Ladies",
+                    note: t ? "يسعدنا ارتداء أحد هذه الألوان" : "Please wear one of these colors",
+                    delay: 0,
+                    children: DCwyColors.map(n => p.jsx(DCwySwatch, { color: n[2], label: t ? n[1] : n[0] }, n[2]))
+                }), p.jsx(DCwyCard, {
+                    icon: "gents",
+                    title: t ? "الرجال" : "Gentlemen",
+                    note: t ? "بدلة سوداء" : "Black suit",
+                    delay: .12,
+                    children: p.jsx(DCwySwatch, { color: "#111111", label: t ? "أسود" : "Black" })
+                })]
+            })]
+        })
+    })
+}
 
 function xL() {
     const {
@@ -23038,36 +23214,10 @@ function xL() {
                     children: isAr ? "برنامج اليوم" : "Timeline of the Day"
                 }), p.jsx("div", {
                     className: "gold-rule mx-auto mb-8"
-                }), p.jsx("p", {
-                    className: "font-body text-lg md:text-xl text-[hsl(var(--plum))]/90 leading-relaxed max-w-xl mb-10 whitespace-pre-wrap",
-                    children: isAr ? "يبدأ الحفل بعقد القران (كتب الكتاب) الساعة 7:00 مساءً، يليه حفل الزفاف." : "The celebration begins with (Katb El Ketab) at 7:00 PM, followed by the wedding reception."
-                }), p.jsxs("div", {
-                    className: "w-full max-w-md mx-auto flex flex-col items-center border border-[hsl(var(--gold))/30] rounded-2xl p-6 md:p-8 bg-[hsl(var(--ivory))/60] shadow-sm",
-                    children: [p.jsxs("div", {
-                        className: "flex flex-col items-center",
-                        children: [p.jsx("span", {
-                            className: "font-serif text-xs tracking-[0.25em] uppercase text-[hsl(var(--gold))] mb-1",
-                            children: isAr ? "7:00 مساءً" : "7:00 PM"
-                        }), p.jsx("h3", {
-                            className: "font-display text-xl md:text-2xl text-[hsl(var(--plum))]",
-                            children: isAr ? "عقد القران (كتب الكتاب)" : "Katb El Ketab"
-                        })]
-                    }), p.jsx("div", {
-                        className: "flex flex-col items-center my-3",
-                        children: p.jsx("div", {
-                            className: "w-px h-8 bg-[hsl(var(--gold))/40]"
-                        })
-                    }), p.jsxs("div", {
-                        className: "flex flex-col items-center",
-                        children: [p.jsx("span", {
-                            className: "font-serif text-xs tracking-[0.25em] uppercase text-[hsl(var(--gold))] mb-1",
-                            children: isAr ? "يليه مباشرة" : "FOLLOWING"
-                        }), p.jsx("h3", {
-                            className: "font-display text-xl md:text-2xl text-[hsl(var(--plum))]",
-                            children: isAr ? "حفل الزفاف" : "Wedding Reception"
-                        })]
-                    })]
-                })]
+                }), p.jsx(TLwy, {
+                    isAr: isAr
+                })
+            ]
             })
         })
     })
@@ -31592,11 +31742,11 @@ const mF = 1,
     $F = {
         "When should I RSVP by?": {
             q: "متى يجب تأكيد الحضور؟",
-            a: "يرجى تأكيد الحضور قبل 28 أغسطس 2026."
+            a: "يرجى تأكيد الحضور قبل 18 أكتوبر 2026."
         },
         "When should I arrive?": {
             q: "متى يجب الوصول؟",
-            a: "يرجى الوصول في تمام الساعة 7:00 مساءً."
+            a: "يرجى الوصول في تمام الساعة 7:30 مساءً."
         },
         "Are kids welcome?": {
             q: "هل يمكن اصطحاب الأطفال؟",
@@ -31710,7 +31860,7 @@ const MF = "c6ce539d-0f10-4257-89b2-988552e40838",
     UF = "cc720d6a-88ef-4db6-82b2-9219d43a20b8",
     BF = "a/v1/cc720d6a-88ef-4db6-82b2-9219d43a20b8/c6ce539d-0f10-4257-89b2-988552e40838/tassel-pink.png",
     zF = 133507,
-    WF = "assets/l5e-images/tassel-pink.png?v=tassel20260727",
+    WF = "assets/l5e-images/tassel-pink.png?v=wy20261007",
     HF = 1,
     bC = {
         asset_id: MF,
@@ -31957,7 +32107,7 @@ function h9() {
                                         value: "12 Rue de l'Exemple, 75001 Paris, France"
                                     }), p.jsx(Bo, {
                                         label: "Account Holders",
-                                        value: "Mohamed and Amira"
+                                        value: "Waleed and Yasmin"
                                     }), p.jsx(Bo, {
                                         label: "IBAN",
                                         value: "FR76 3000 4000 5000 6000 7000 123"
@@ -32653,17 +32803,17 @@ function W9({
     }, []);
     const r = () => {
         const s = m => m.toString().padStart(2, "0"),
-            i = new Date(Date.UTC(2026, 7, 28, 17, 0)),
-            o = new Date(Date.UTC(2026, 7, 29, 0, 0)),
+            i = new Date(Date.UTC(2026, 9, 18, 16, 30)),
+            o = new Date(Date.UTC(2026, 9, 18, 21, 0)),
             a = m => `${m.getUTCFullYear()}${s(m.getUTCMonth()+1)}${s(m.getUTCDate())}T${s(m.getUTCHours())}${s(m.getUTCMinutes())}00Z`,
-            l = "Mohamed & Amira's Wedding",
-            c = "Ociel hall, Talkha City, Mansoura, Dakahlia Governorate, Egypt",
+            l = "Waleed & Yasmin's Wedding",
+            c = "Alturath Hall",
             u = /iPad|iPhone|iPod/.test(navigator.userAgent);
         if (!u) {
-            const m = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(l)}&dates=${a(i)}/${a(o)}&location=${encodeURIComponent(c)}&details=${encodeURIComponent("Mohamed & Amira's Wedding Celebration")}`;
+            const m = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(l)}&dates=${a(i)}/${a(o)}&location=${encodeURIComponent(c)}&details=${encodeURIComponent("Waleed & Yasmin's Wedding Celebration")}`;
             if (window.open(m, "_blank", "noopener,noreferrer")) return
         }
-        const d = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Mohamed-Amira//Wedding//EN", "BEGIN:VEVENT", `UID:${Date.now()}@mohamed-amira-wedding`, `DTSTAMP:${a(new Date)}`, `DTSTART:${a(i)}`, `DTEND:${a(o)}`, `SUMMARY:${l}`, `LOCATION:${c}`, "DESCRIPTION:Mohamed & Amira's Wedding Celebration", "END:VEVENT", "END:VCALENDAR"].join(`\r
+        const d = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Waleed-Yasmin//Wedding//EN", "BEGIN:VEVENT", `UID:${Date.now()}@waleed-yasmin-wedding`, `DTSTAMP:${a(new Date)}`, `DTSTART:${a(i)}`, `DTEND:${a(o)}`, `SUMMARY:${l}`, `LOCATION:${c}`, "DESCRIPTION:Waleed & Yasmin's Wedding Celebration", "END:VEVENT", "END:VCALENDAR"].join(`\r
 `);
         if (u) {
             const m = `data:text/calendar;charset=utf-8,${encodeURIComponent(d)}`;
@@ -32675,7 +32825,7 @@ function W9({
             }),
             f = URL.createObjectURL(h),
             w = document.createElement("a");
-        w.href = f, w.download = "mohamed-amira-wedding.ics", document.body.appendChild(w), w.click(), document.body.removeChild(w), setTimeout(() => URL.revokeObjectURL(f), 1e3)
+        w.href = f, w.download = "waleed-yasmin-wedding.ics", document.body.appendChild(w), w.click(), document.body.removeChild(w), setTimeout(() => URL.revokeObjectURL(f), 1e3)
     };
     return e === "no" ? p.jsx("section", {
         id: "rsvp",
@@ -33181,7 +33331,7 @@ function IV({
                 className: "pointer-events-none select-none w-28 md:w-36 mb-4 opacity-95"
             }), p.jsxs("p", {
                 className: "font-display italic text-2xl md:text-3xl text-[hsl(var(--plum))] mb-1",
-                children: [s === "ar" || s === "es" ? "محمد" : e, s === "ar" || s === "es" ? " و " : " & ", s === "ar" || s === "es" ? "أميرة" : t]
+                children: [s === "ar" || s === "es" ? "وليد" : e, s === "ar" || s === "es" ? " و " : " & ", s === "ar" || s === "es" ? "ياسمين" : t]
             }), p.jsx("p", {
                 className: "text-sm text-[hsl(var(--plum))]/90 font-body tracking-[0.3em] uppercase",
                 children: i
@@ -33807,7 +33957,7 @@ const OB = 1,
                     preload: "auto"
                 }), p.jsx("video", {
                     ref: i2,
-                    src: "assets/l5e-videos/Door_opened_pink_version.mp4?v=clean20260801",
+                    src: "assets/l5e-videos/Door_opened_pink_version.mp4?v=wy20261007",
                     className: "absolute inset-0 h-full w-full object-cover",
                     style: {
                         opacity: r === "door" ? 1 : 0
@@ -33842,7 +33992,7 @@ const OB = 1,
                     },
                     className: "absolute bottom-16 inset-x-0 text-center text-[hsl(var(--ivory))]/80 text-xs font-body tracking-[0.25em] uppercase pointer-events-none",
                     style: {
-                        textShadow: "0 1px 4px rgba(92,58,71,0.35)"
+                        textShadow: "0 1px 4px rgba(79,39,28,0.35)"
                     },
                     children: n("intro.tap")
                 }), r === "loading" && p.jsx(z.p, {
@@ -33854,7 +34004,7 @@ const OB = 1,
                     },
                     className: "absolute bottom-16 inset-x-0 text-center text-[hsl(var(--ivory))]/80 text-xs font-body tracking-[0.25em] uppercase pointer-events-none",
                     style: {
-                        textShadow: "0 1px 4px rgba(92,58,71,0.35)"
+                        textShadow: "0 1px 4px rgba(79,39,28,0.35)"
                     },
                     children: n("intro.loading")
                 })]
@@ -33938,13 +34088,13 @@ const nz = "4eb245b4-1929-45cc-b854-c19be74b61fc",
                 })
             },
             c = e || {
-                couple_name_1: "Mohamed",
-                couple_name_2: "Amira",
-                wedding_date: "2026-08-28",
+                couple_name_1: "Waleed",
+                couple_name_2: "Yasmin",
+                wedding_date: "2026-10-18",
                 hero_subtitle: null,
-                banquet_location: "Ociel hall, Talkha City, Mansoura, Dakahlia Governorate, Egypt",
-                banquet_address: "Ociel hall, Talkha City, Mansoura, Dakahlia Governorate, Egypt",
-                banquet_maps_url: "https://maps.app.goo.gl/CLuTgs5QUp5Kztyy7?g_st=ai"
+                banquet_location: "Alturath Hall",
+                banquet_address: "Alturath Hall",
+                banquet_maps_url: "https://maps.app.goo.gl/eDZW7yBgbjk415DVA?g_st=ii"
             };
         return p.jsxs(p.Fragment, {
             children: [p.jsx("button", {
@@ -33982,11 +34132,11 @@ const nz = "4eb245b4-1929-45cc-b854-c19be74b61fc",
                     location: c.banquet_location,
                     address: c.banquet_address,
                     mapsUrl: c.banquet_maps_url,
-                    startTime: "19:00",
+                    startTime: "19:30",
                     endTime: "00:00"
                 }), p.jsx(uL, {
                     targetDate: c.wedding_date
-                }), p.jsx(xL, {}), p.jsx(DF, {}),  p.jsx(_V, {}), p.jsx(IV, {
+                }), p.jsx(xL, {}), p.jsx(DCwy, {}), p.jsx(DF, {}),  p.jsx(_V, {}), p.jsx(IV, {
                     name1: c.couple_name_1,
                     name2: c.couple_name_2,
                     date: c.wedding_date
@@ -35980,7 +36130,7 @@ const W7 = () => {
             children: p.jsx(u8, {
                 children: p.jsxs(HN, {
                     children: [p.jsx(TA, {}), p.jsx(ij, {}), p.jsx(xI, {
-                        basename: window.location.pathname.startsWith("/amira-mohamed-wedding") ? "/amira-mohamed-wedding" : "/",
+                        basename: window.location.pathname.startsWith("/waleed-yasmeen-wedding") ? "/waleed-yasmeen-wedding" : "/",
                         children: p.jsxs(pI, {
                             children: [p.jsx(Go, {
                                 path: "/",
