@@ -176,11 +176,14 @@ begin
   end if;
 
   delete from public.wy_rsvp_log where at < now() - interval '1 day';
-  -- Per-caller limits only: no global cap, so one abuser can't block other guests.
+  -- Per-caller limits, plus a generous global ceiling that bounds a
+  -- distributed flood but is far above what one caller can reach alone.
   if (select count(*) from public.wy_rsvp_log
       where client = v_client and at > now() - interval '10 minutes') >= 5
      or (select count(*) from public.wy_rsvp_log
-         where client = v_client and at > now() - interval '1 day') >= 20 then
+         where client = v_client and at > now() - interval '1 day') >= 20
+     or (select count(*) from public.wy_rsvp_log
+         where at > now() - interval '1 hour') >= 400 then
     return jsonb_build_object('ok', false, 'error', 'rate_limited');
   end if;
 
