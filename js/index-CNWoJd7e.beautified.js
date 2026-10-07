@@ -33616,7 +33616,7 @@ function TB({
                 opacity: o.opacity,
                 animationDelay: `${o.delay}s`,
                 animationDuration: `${o.duration}s`,
-                filter: "drop-shadow(0 0 6px hsl(var(--candlelight) / 0.85)) drop-shadow(0 0 14px hsl(var(--gold) / 0.5))",
+                filter: "drop-shadow(0 0 6px hsl(var(--candlelight) / 0.85))",
                 rotate: `${o.rotate}deg`
             }
         })
@@ -34027,7 +34027,7 @@ function ez() {
     }, r);
     return p.jsxs("div", {
         dir: "ltr",
-        className: "fixed top-4 right-4 z-[60] flex items-center rounded-sm border border-[hsl(var(--antique-gold))]/50 bg-[hsl(var(--ivory))]/85 backdrop-blur-md shadow-soft overflow-hidden",
+        className: "fixed top-4 right-4 z-[60] flex items-center rounded-sm border border-[hsl(var(--antique-gold))]/50 bg-[hsl(var(--ivory))]/85 shadow-soft overflow-hidden",
         children: [n("en", "English"), p.jsx("span", {
             className: "w-px h-4 bg-[hsl(var(--antique-gold))]/40"
         }), n("ar", "العربية")]
@@ -34149,7 +34149,7 @@ const nz = "4eb245b4-1929-45cc-b854-c19be74b61fc",
         return p.jsxs(p.Fragment, {
             children: [p.jsx("button", {
                 onClick: l,
-                className: "fixed bottom-6 right-6 z-50 p-3 rounded-full bg-[hsl(var(--plum))]/90 text-[hsl(var(--ivory))] shadow-elegant hover:bg-[hsl(var(--plum))] transition-all backdrop-blur-sm",
+                className: "fixed bottom-6 right-6 z-50 p-3 rounded-full bg-[hsl(var(--plum))]/90 text-[hsl(var(--ivory))] shadow-elegant hover:bg-[hsl(var(--plum))] transition-all",
                 "aria-label": t(s ? "ui.muted" : "ui.unmuted"),
                 children: s ? p.jsx(WR, {
                     size: 18
@@ -34162,15 +34162,15 @@ const nz = "4eb245b4-1929-45cc-b854-c19be74b61fc",
             }), !n && p.jsx(ez, {}), !n && p.jsxs("main", {
                 className: "bg-background relative overflow-hidden",
                 children: [p.jsx(TB, {
-                    count: 90
+                    count: 40
                 }), p.jsx(PB, {
-                    count: 70
+                    count: 30
                 }), p.jsx(AB, {
-                    count: 22
-                }), p.jsx(RB, {
                     count: 10
+                }), p.jsx(RB, {
+                    count: 6
                 }), p.jsx(jB, {
-                    count: 3
+                    count: 2
                 }), p.jsx(NB, {}), p.jsx(_8, {
                     name1: c.couple_name_1,
                     name2: c.couple_name_2,
