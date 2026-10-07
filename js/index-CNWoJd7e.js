@@ -34077,6 +34077,54 @@ const nz = "4eb245b4-1929-45cc-b854-c19be74b61fc",
                 u.pause(), o.current = null
             }
         }, []);
+        g.useEffect(() => {
+            // Auto-scroll slowly after 3s without user interaction; any interaction pauses it.
+            if (n || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+            const speed = 45;
+            let raf = 0, idle = 0, last = 0, acc = 0, running = !1, done = !1;
+            const isTyping = () => {
+                    const el = document.activeElement;
+                    return !!el && /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)
+                },
+                stop = () => {
+                    running = !1, cancelAnimationFrame(raf), raf = 0, last = 0, acc = 0
+                },
+                schedule = () => {
+                    clearTimeout(idle), done || (idle = setTimeout(start, 3e3))
+                },
+                step = t => {
+                    if (!running) return;
+                    const max = document.documentElement.scrollHeight - window.innerHeight;
+                    if (window.scrollY >= max - 2) {
+                        done = !0, stop();
+                        return
+                    }
+                    const dt = last ? Math.min(t - last, 100) : 0;
+                    last = t, acc += speed * dt / 1e3;
+                    const px = Math.floor(acc);
+                    px > 0 && (acc -= px, window.scrollBy({
+                        top: px,
+                        behavior: "instant"
+                    })), raf = requestAnimationFrame(step)
+                },
+                start = () => {
+                    if (done || running) return;
+                    if (isTyping() || document.hidden) {
+                        schedule();
+                        return
+                    }
+                    running = !0, raf = requestAnimationFrame(step)
+                },
+                onUser = () => {
+                    stop(), schedule()
+                },
+                evs = ["wheel", "touchstart", "touchmove", "keydown", "mousedown"];
+            return evs.forEach(e => window.addEventListener(e, onUser, {
+                passive: !0
+            })), schedule(), () => {
+                stop(), clearTimeout(idle), evs.forEach(e => window.removeEventListener(e, onUser))
+            }
+        }, [n]);
         const a = () => {
                 const u = o.current;
                 u && (u.muted = s, u.play().catch(() => {}))
