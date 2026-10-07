@@ -13,12 +13,17 @@ create table if not exists public.wy_dashboard_secret (
 create table if not exists public.wy_passcode_failures (
   at timestamptz not null default now()
 );
+alter table public.wy_passcode_failures
+  add column if not exists client text not null default 'unknown';
 
 -- No policies: these two tables are unreachable through the public API.
 alter table public.wy_dashboard_secret enable row level security;
 alter table public.wy_passcode_failures enable row level security;
 
--- Returns 'ok', 'wrong' or 'locked' (20 wrong tries in 15 minutes locks it).
+-- Returns 'ok', 'wrong' or 'locked'. Lockout is per caller (5 wrong tries in
+-- 15 minutes); a high global ceiling (300 per hour) bounds distributed guessing
+-- without letting a single client lock the owner out.
+-- Requires public.wy_client_id() from wy_setup.sql.
 create or replace function public.wy_check_passcode(p_passcode text)
 returns text
 language plpgsql
@@ -28,19 +33,27 @@ as $$
 declare
   v_hash text;
   v_fails integer;
+  v_client text := public.wy_client_id();
 begin
   delete from public.wy_passcode_failures where at < now() - interval '1 day';
 
   select count(*) into v_fails
   from public.wy_passcode_failures
-  where at > now() - interval '15 minutes';
-  if v_fails >= 20 then
+  where client = v_client and at > now() - interval '15 minutes';
+  if v_fails >= 5 then
+    return 'locked';
+  end if;
+
+  select count(*) into v_fails
+  from public.wy_passcode_failures
+  where at > now() - interval '1 hour';
+  if v_fails >= 300 then
     return 'locked';
   end if;
 
   select passcode_hash into v_hash from public.wy_dashboard_secret where id = 1;
   if v_hash is null or p_passcode is null or crypt(p_passcode, v_hash) <> v_hash then
-    insert into public.wy_passcode_failures default values;
+    insert into public.wy_passcode_failures (client) values (v_client);
     return 'wrong';
   end if;
   return 'ok';
@@ -93,7 +106,8 @@ grant execute on function public.wy_get_responses(text) to anon, authenticated;
 grant execute on function public.wy_delete_response(text, uuid) to anon, authenticated;
 
 -- ---------------------------------------------------------------------------
--- Set (or change) the passcode. Replace YOUR_PASSCODE, run this statement,
+-- Set (or change) the passcode. Use 10+ characters that aren't guessable
+-- (not the wedding date or names). Replace YOUR_PASSCODE, run this statement,
 -- and don't save the real passcode in this file (the repository is shared).
 --
 -- insert into public.wy_dashboard_secret (id, passcode_hash)

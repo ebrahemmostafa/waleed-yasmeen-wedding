@@ -115,6 +115,34 @@ create table if not exists public.wy_rsvp_log (
 );
 alter table public.wy_rsvp_log enable row level security; -- no policies: private
 
+-- Caller identity for rate limits. cf-connecting-ip is set by the platform's
+-- edge and can't be supplied by the caller; for x-forwarded-for only the
+-- right-most entry (appended by the proxy) is trusted, never the first.
+create or replace function public.wy_client_id()
+returns text
+language plpgsql
+stable
+set search_path = public
+as $$
+declare
+  h json := nullif(current_setting('request.headers', true), '')::json;
+  parts text[];
+begin
+  if h is null then
+    return 'unknown';
+  end if;
+  if nullif(h ->> 'cf-connecting-ip', '') is not null then
+    return h ->> 'cf-connecting-ip';
+  end if;
+  parts := string_to_array(coalesce(h ->> 'x-forwarded-for', ''), ',');
+  if coalesce(array_length(parts, 1), 0) > 0 then
+    return btrim(parts[array_length(parts, 1)]);
+  end if;
+  return 'unknown';
+end;
+$$;
+revoke all on function public.wy_client_id() from public, anon, authenticated;
+
 create or replace function public.wy_submit_rsvp(p jsonb)
 returns jsonb
 language plpgsql
@@ -122,12 +150,7 @@ security definer
 set search_path = public
 as $$
 declare
-  v_headers json := nullif(current_setting('request.headers', true), '')::json;
-  v_client text := coalesce(
-    v_headers ->> 'cf-connecting-ip',
-    split_part(v_headers ->> 'x-forwarded-for', ',', 1),
-    'unknown'
-  );
+  v_client text := public.wy_client_id();
   v_name text := btrim(coalesce(p ->> 'full_name', ''));
   v_attendance text := p ->> 'attendance';
   v_email text := nullif(btrim(coalesce(p ->> 'email', '')), '');
@@ -153,10 +176,11 @@ begin
   end if;
 
   delete from public.wy_rsvp_log where at < now() - interval '1 day';
+  -- Per-caller limits only: no global cap, so one abuser can't block other guests.
   if (select count(*) from public.wy_rsvp_log
       where client = v_client and at > now() - interval '10 minutes') >= 5
      or (select count(*) from public.wy_rsvp_log
-         where at > now() - interval '10 minutes') >= 100 then
+         where client = v_client and at > now() - interval '1 day') >= 20 then
     return jsonb_build_object('ok', false, 'error', 'rate_limited');
   end if;
 
