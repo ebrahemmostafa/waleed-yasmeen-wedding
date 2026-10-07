@@ -33971,7 +33971,7 @@ const OB = 1,
                     preload: "auto"
                 }), p.jsx("video", {
                     ref: i2,
-                    src: "assets/l5e-videos/Door_opened_pink_version.mp4?v=wy20261007c",
+                    src: "assets/l5e-videos/Door_opened_pink_version.mp4?v=wy20261007d",
                     className: "absolute inset-0 h-full w-full object-cover",
                     style: {
                         opacity: r === "door" ? 1 : 0
