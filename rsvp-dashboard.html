@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Waleed &amp; Yasmin — RSVP Responses</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --tuscany: #CB632F;
+            --paarl: #A65330;
+            --red-robin: #833922;
+            --cocoa: #4F271C;
+            --eclipse: #301918;
+            --olive: #6B7240;
+            --olive-soft: #E4E5CF;
+            --off-white: #F8F4EC;
+            --paper: #FFFDF8;
+            --line: #E6DDCB;
+            --muted: #8A7468;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--off-white);
+            color: var(--eclipse);
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        h1, h2, .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+        button, input, select { font: inherit; }
+
+        .hidden { display: none !important; }
+
+        /* Lock screen */
+        .lock {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+        }
+
+        .lock-card {
+            width: 100%;
+            max-width: 380px;
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 36px 28px;
+            text-align: center;
+            box-shadow: 0 18px 50px -24px rgba(79, 39, 28, .35);
+        }
+
+        .lock-card h1 {
+            margin: 0;
+            font-size: 2.1rem;
+            color: var(--tuscany);
+            font-weight: 600;
+        }
+
+        .lock-card p { margin: 6px 0 24px; color: var(--muted); }
+
+        .rule {
+            width: 90px;
+            height: 1px;
+            margin: 14px auto 0;
+            background: linear-gradient(90deg, transparent, var(--olive), transparent);
+        }
+
+        .passcode {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #fff;
+            text-align: center;
+            font-size: 1.4rem;
+            letter-spacing: .5em;
+            color: var(--eclipse);
+        }
+
+        .passcode:focus, .search:focus, .filter:focus {
+            outline: 2px solid var(--tuscany);
+            outline-offset: 1px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 11px 18px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: .9rem;
+            transition: background .2s, color .2s, border-color .2s;
+        }
+
+        .btn-primary { background: var(--tuscany); color: #fff; }
+        .btn-primary:hover { background: var(--paarl); }
+        .btn-primary:disabled { opacity: .6; cursor: wait; }
+        .btn-ghost { background: transparent; color: var(--cocoa); border-color: var(--line); }
+        .btn-ghost:hover { border-color: var(--olive); color: var(--olive); }
+        .btn-block { width: 100%; margin-top: 14px; padding: 14px; font-size: 1rem; }
+
+        .error {
+            min-height: 1.5em;
+            margin-top: 12px;
+            color: #B42318;
+            font-size: .9rem;
+        }
+
+        /* Dashboard */
+        header {
+            background: var(--eclipse);
+            color: var(--off-white);
+            border-bottom: 3px solid var(--olive);
+        }
+
+        .header-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 18px 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        header h1 { margin: 0; font-size: 1.7rem; font-weight: 600; }
+        header h1 span { color: #E9A47E; }
+        header .btn-ghost { color: var(--off-white); border-color: rgba(248, 244, 236, .3); }
+        header .btn-ghost:hover { color: #fff; border-color: #fff; }
+
+        main { max-width: 1180px; margin: 0 auto; padding: 24px 16px 48px; }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 14px;
+            margin-bottom: 22px;
+        }
+
+        .stat {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 16px 18px;
+        }
+
+        .stat .label {
+            font-size: .75rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .stat .value {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            color: var(--eclipse);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat.yes .value { color: var(--olive); }
+        .stat.no .value { color: var(--red-robin); }
+
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .search, .filter {
+            padding: 10px 14px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+            color: var(--eclipse);
+        }
+
+        .search { flex: 1 1 220px; min-width: 0; }
+        .toolbar .spacer { flex: 1 1 0; }
+
+        .updated { color: var(--muted); font-size: .8rem; margin: 0 0 10px; }
+
+        .table-wrap {
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            overflow-x: auto;
+        }
+
+        table { width: 100%; border-collapse: collapse; min-width: 760px; }
+
+        th, td {
+            padding: 12px 14px;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid var(--line);
+        }
+
+        th {
+            font-size: .72rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            background: #FBF7EF;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        tbody tr:last-child td { border-bottom: 0; }
+        tbody tr:hover { background: #FCF8F1; }
+
+        td.num { color: var(--muted); font-variant-numeric: tabular-nums; width: 44px; }
+        td.name { font-weight: 600; color: var(--cocoa); }
+        td.msg { max-width: 320px; white-space: pre-wrap; word-break: break-word; color: #5C4A40; }
+        td.date { white-space: nowrap; color: var(--muted); font-size: .85rem; }
+
+        .pill {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 999px;
+            font-size: .78rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .pill.yes { background: var(--olive-soft); color: #4F5530; }
+        .pill.no { background: #F6DED3; color: var(--red-robin); }
+
+        .btn-delete {
+            background: transparent;
+            border: 1px solid #EBC9BA;
+            color: var(--red-robin);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: .8rem;
+        }
+
+        .btn-delete:hover { background: var(--red-robin); color: #fff; border-color: var(--red-robin); }
+
+        .empty { padding: 40px 16px; text-align: center; color: var(--muted); }
+    </style>
+</head>
+<body>
+
+    <section id="lockScreen" class="lock">
+        <form id="lockForm" class="lock-card" autocomplete="off">
+            <h1>Waleed &amp; Yasmin</h1>
+            <p class="serif" style="font-size:1.15rem">RSVP Responses</p>
+            <div class="rule" style="margin:-8px auto 24px"></div>
+            <label for="passcode" class="serif" style="display:block;margin-bottom:8px;color:var(--cocoa);font-size:1.05rem">Enter passcode</label>
+            <input id="passcode" class="passcode" type="password" inputmode="numeric" autocomplete="off" required>
+            <button id="unlockBtn" class="btn btn-primary btn-block" type="submit">Unlock</button>
+            <div id="lockError" class="error" role="alert"></div>
+        </form>
+    </section>
+
+    <div id="dashboard" class="hidden">
+        <header>
+            <div class="header-inner">
+                <h1>Waleed <span>&amp;</span> Yasmin · RSVPs</h1>
+                <div style="display:flex;gap:8px;flex-wrap:wrap">
+                    <button id="refreshBtn" class="btn btn-ghost" type="button">Refresh</button>
+                    <button id="exportBtn" class="btn btn-primary" type="button">Export CSV</button>
+                    <button id="lockBtn" class="btn btn-ghost" type="button">Lock</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="stats">
+                <div class="stat"><div class="label">Total responses</div><div id="statTotal" class="value">0</div></div>
+                <div class="stat yes"><div class="label">Attending</div><div id="statYes" class="value">0</div></div>
+                <div class="stat no"><div class="label">Not attending</div><div id="statNo" class="value">0</div></div>
+            </div>
+
+            <div class="toolbar">
+                <input id="search" class="search" type="search" placeholder="Search name, email or message…" aria-label="Search responses">
+                <select id="filter" class="filter" aria-label="Filter by attendance">
+                    <option value="all">All responses</option>
+                    <option value="yes">Attending</option>
+                    <option value="no">Not attending</option>
+                </select>
+            </div>
+            <p id="updated" class="updated"></p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Date</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="rows"></tbody>
+                </table>
+                <div id="empty" class="empty hidden">No responses yet.</div>
+            </div>
+            <div id="dashError" class="error" role="alert"></div>
+        </main>
+    </div>
+
+    <script>
+        const SUPABASE_URL = "https://fquuvcqxnyvrwktndgre.supabase.co";
+        // Public "anon" key (same one the invitation site uses). Data access is
+        // enforced in the database: responses are only returned for the right passcode.
+        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxdXV2Y3F4bnl2cndrdG5kZ3JlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2ODQ3ODgsImV4cCI6MjA5OTI2MDc4OH0.k5ofLCsjAoZCkLAIGIKLfS7d-W9sbUJtPQKgkDjOSt0";
+        const SESSION_KEY = "wy_dashboard_passcode";
+
+        let passcode = "";
+        let responses = [];
+
+        const $ = id => document.getElementById(id);
+
+        const ERRORS = {
+            wrong: "Wrong passcode.",
+            locked: "Too many wrong attempts. Try again in 15 minutes."
+        };
+
+        async function rpc(fn, body) {
+            const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/${fn}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    apikey: SUPABASE_ANON_KEY,
+                    Authorization: `Bearer ${SUPABASE_ANON_KEY}`
+                },
+                body: JSON.stringify(body)
+            });
+            if (res.status === 404) {
+                throw new Error("The database isn't set up yet. Run supabase/wy_setup.sql and supabase/wy_responses_dashboard.sql in Supabase.");
+            }
+            if (!res.ok) throw new Error(`Server error (${res.status}). Please try again.`);
+            const data = await res.json();
+            if (!data || data.ok !== true) {
+                throw Object.assign(new Error(ERRORS[data && data.error] || "Request failed."), { code: data && data.error });
+            }
+            return data;
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? "").replace(/[&<>"']/g, c => ({
+                "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+            }[c]));
+        }
+
+        function formatDate(iso) {
+            if (!iso) return "—";
+            return new Date(iso).toLocaleString("en-GB", {
+                day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit"
+            });
+        }
+
+        function filtered() {
+            const q = $("search").value.trim().toLowerCase();
+            const f = $("filter").value;
+            return responses.filter(r => {
+                if (f !== "all" && r.attendance !== f) return false;
+                if (!q) return true;
+                return [r.full_name, r.email, r.message, r.dietary_requirements]
+                    .some(v => String(v || "").toLowerCase().includes(q));
+            });
+        }
+
+        function render() {
+            const yes = responses.filter(r => r.attendance === "yes").length;
+            $("statTotal").textContent = responses.length;
+            $("statYes").textContent = yes;
+            $("statNo").textContent = responses.length - yes;
+
+            const list = filtered();
+            const tbody = $("rows");
+            tbody.innerHTML = "";
+            list.forEach((r, i) => {
+                const tr = document.createElement("tr");
+                const isYes = r.attendance === "yes";
+                tr.innerHTML = `
+                    <td class="num">${list.length - i}</td>
+                    <td class="name">${escapeHtml(r.full_name)}</td>
+                    <td><span class="pill ${isYes ? "yes" : "no"}">${isYes ? "Attending" : "Not attending"}</span></td>
+                    <td>${escapeHtml(r.email || "—")}</td>
+                    <td class="msg">${escapeHtml(r.message || "—")}</td>
+                    <td class="date">${escapeHtml(formatDate(r.created_at))}</td>
+                    <td></td>`;
+                const del = document.createElement("button");
+                del.type = "button";
+                del.className = "btn-delete";
+                del.textContent = "Delete";
+                del.addEventListener("click", () => removeResponse(r));
+                tr.lastElementChild.appendChild(del);
+                tbody.appendChild(tr);
+            });
+            $("empty").classList.toggle("hidden", list.length > 0);
+            $("empty").textContent = responses.length ? "No responses match your search." : "No responses yet.";
+        }
+
+        async function load() {
+            $("dashError").textContent = "";
+            const data = await rpc("wy_get_responses", { p_passcode: passcode });
+            responses = Array.isArray(data.rows) ? data.rows : [];
+            $("updated").textContent = `Last updated ${new Date().toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })}`;
+            render();
+        }
+
+        async function removeResponse(r) {
+            if (!confirm(`Delete the response from "${r.full_name}"? This can't be undone.`)) return;
+            try {
+                await rpc("wy_delete_response", { p_passcode: passcode, p_id: r.id });
+                await load();
+            } catch (err) {
+                $("dashError").textContent = err.message;
+            }
+        }
+
+        // Prefix values that spreadsheet apps would treat as formulas.
+        function csvCell(value) {
+            let s = String(value ?? "");
+            if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+            return `"${s.replace(/"/g, '""')}"`;
+        }
+
+        function exportCsv() {
+            const header = ["Full Name", "Attendance", "Email", "Dietary Requirements", "Message", "Response Date"];
+            const lines = filtered().map(r => [
+                r.full_name,
+                r.attendance === "yes" ? "Attending" : "Not Attending",
+                r.email,
+                r.dietary_requirements,
+                r.message,
+                r.created_at
+            ].map(csvCell).join(","));
+            const csv = "﻿" + [header.map(csvCell).join(","), ...lines].join("\r\n");
+            const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `Waleed-Yasmin-RSVPs-${new Date().toISOString().slice(0, 10)}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            setTimeout(() => URL.revokeObjectURL(url), 1000);
+        }
+
+        function showDashboard(show) {
+            $("lockScreen").classList.toggle("hidden", show);
+            $("dashboard").classList.toggle("hidden", !show);
+        }
+
+        function lock(message) {
+            passcode = "";
+            responses = [];
+            try { sessionStorage.removeItem(SESSION_KEY); } catch (e) {}
+            $("passcode").value = "";
+            $("lockError").textContent = message || "";
+            showDashboard(false);
+            $("passcode").focus();
+        }
+
+        async function unlock(code) {
+            passcode = code;
+            $("unlockBtn").disabled = true;
+            $("lockError").textContent = "";
+            try {
+                await load();
+                try { sessionStorage.setItem(SESSION_KEY, code); } catch (e) {}
+                showDashboard(true);
+            } catch (err) {
+                lock(err.message);
+            } finally {
+                $("unlockBtn").disabled = false;
+            }
+        }
+
+        $("lockForm").addEventListener("submit", e => {
+            e.preventDefault();
+            const code = $("passcode").value.trim();
+            if (code) unlock(code);
+        });
+        $("search").addEventListener("input", render);
+        $("filter").addEventListener("change", render);
+        $("exportBtn").addEventListener("click", exportCsv);
+        $("lockBtn").addEventListener("click", () => lock());
+        $("refreshBtn").addEventListener("click", async () => {
+            try {
+                await load();
+            } catch (err) {
+                if (err.code === "wrong" || err.code === "locked") lock(err.message);
+                else $("dashError").textContent = err.message;
+            }
+        });
+
+        let saved = "";
+        try { saved = sessionStorage.getItem(SESSION_KEY) || ""; } catch (e) {}
+        if (saved) unlock(saved); else $("passcode").focus();
+    </script>
+</body>
+</html>

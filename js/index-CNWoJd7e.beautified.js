@@ -32754,15 +32754,14 @@ function B9() {
     return W_({
         mutationFn: async t => {
             const {
-                website: w,
-                ...row
-            } = t;
-            if (w) return null;
-            const {
+                data: n,
                 error: r
-            } = await an.from("wy_guests").insert(row);
+            } = await an.rpc("wy_submit_rsvp", {
+                p: t
+            });
             if (r) throw r;
-            return null
+            if (n && n.ok === !1) throw new Error(n.error === "rate_limited" ? "Too many submissions, please try again in a few minutes." : "Could not submit your RSVP. Please check your details.");
+            return n
         },
         onSuccess: () => {
             e.invalidateQueries({

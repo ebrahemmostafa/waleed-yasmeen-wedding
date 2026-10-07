@@ -71,10 +71,9 @@ drop policy if exists wy_user_roles_select_own on public.wy_user_roles;
 create policy wy_user_roles_select_own on public.wy_user_roles
   for select to authenticated using (user_id = auth.uid());
 
--- Guests: anyone may submit an RSVP; only wedding admins can read or delete
+-- Guests: no direct inserts (RSVPs go through wy_submit_rsvp below);
+-- only wedding admins can read or delete
 drop policy if exists wy_guests_insert_public on public.wy_guests;
-create policy wy_guests_insert_public on public.wy_guests
-  for insert to anon, authenticated with check (true);
 
 drop policy if exists wy_guests_select_admin on public.wy_guests;
 create policy wy_guests_select_admin on public.wy_guests
@@ -101,10 +100,84 @@ drop policy if exists wy_faqs_write_admin on public.wy_faqs;
 create policy wy_faqs_write_admin on public.wy_faqs
   for all to authenticated using (public.wy_is_admin()) with check (public.wy_is_admin());
 
-grant select, insert, delete on public.wy_guests to anon, authenticated;
+revoke insert, update on public.wy_guests from anon, authenticated;
+revoke all on public.wy_guests from anon;
+grant select, delete on public.wy_guests to authenticated;
 grant select on public.wy_wedding_settings, public.wy_faqs to anon, authenticated;
 grant insert, update, delete on public.wy_wedding_settings, public.wy_faqs to authenticated;
 grant select on public.wy_user_roles to authenticated;
+
+-- ---------------------------------------------------------------------------
+-- RSVP submission: validated, honeypot-checked and rate-limited server side.
+create table if not exists public.wy_rsvp_log (
+  client text not null,
+  at timestamptz not null default now()
+);
+alter table public.wy_rsvp_log enable row level security; -- no policies: private
+
+create or replace function public.wy_submit_rsvp(p jsonb)
+returns jsonb
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  v_headers json := nullif(current_setting('request.headers', true), '')::json;
+  v_client text := coalesce(
+    v_headers ->> 'cf-connecting-ip',
+    split_part(v_headers ->> 'x-forwarded-for', ',', 1),
+    'unknown'
+  );
+  v_name text := btrim(coalesce(p ->> 'full_name', ''));
+  v_attendance text := p ->> 'attendance';
+  v_email text := nullif(btrim(coalesce(p ->> 'email', '')), '');
+  v_diet text := nullif(btrim(coalesce(p ->> 'dietary_requirements', '')), '');
+  v_message text := nullif(btrim(coalesce(p ->> 'message', '')), '');
+begin
+  -- Bots fill the hidden "website" field: pretend success, store nothing.
+  if coalesce(p ->> 'website', '') <> '' then
+    return jsonb_build_object('ok', true);
+  end if;
+
+  if char_length(v_name) < 2 or char_length(v_name) > 120 then
+    return jsonb_build_object('ok', false, 'error', 'invalid_name');
+  end if;
+  if v_attendance is null or v_attendance not in ('yes', 'no') then
+    return jsonb_build_object('ok', false, 'error', 'invalid_attendance');
+  end if;
+  if v_email is not null and (char_length(v_email) > 254 or v_email !~ '^[^\s@]+@[^\s@]+\.[^\s@]+$') then
+    return jsonb_build_object('ok', false, 'error', 'invalid_email');
+  end if;
+  if char_length(coalesce(v_diet, '')) > 500 or char_length(coalesce(v_message, '')) > 1000 then
+    return jsonb_build_object('ok', false, 'error', 'too_long');
+  end if;
+
+  delete from public.wy_rsvp_log where at < now() - interval '1 day';
+  if (select count(*) from public.wy_rsvp_log
+      where client = v_client and at > now() - interval '10 minutes') >= 5
+     or (select count(*) from public.wy_rsvp_log
+         where at > now() - interval '10 minutes') >= 100 then
+    return jsonb_build_object('ok', false, 'error', 'rate_limited');
+  end if;
+
+  -- Ignore exact repeat submissions of the same name within 10 minutes.
+  if not exists (
+    select 1 from public.wy_guests
+    where lower(full_name) = lower(v_name) and created_at > now() - interval '10 minutes'
+  ) then
+    insert into public.wy_guests
+      (full_name, phone, email, attendance, guest_count, companions, dietary_requirements, message)
+    values
+      (v_name, null, v_email, v_attendance, 1, '[]'::jsonb, v_diet, v_message);
+  end if;
+
+  insert into public.wy_rsvp_log (client) values (v_client);
+  return jsonb_build_object('ok', true);
+end;
+$$;
+
+revoke all on function public.wy_submit_rsvp(jsonb) from public;
+grant execute on function public.wy_submit_rsvp(jsonb) to anon, authenticated;
 
 -- ---------------------------------------------------------------------------
 -- Make someone an admin of THIS wedding (run after they sign up on /admin).
