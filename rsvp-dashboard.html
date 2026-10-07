@@ -327,10 +327,13 @@
     </div>
 
     <script>
-        const SUPABASE_URL = "https://fquuvcqxnyvrwktndgre.supabase.co";
-        // Public "anon" key (same one the invitation site uses). Data access is
+        const SUPABASE_URL = "https://jcuqwcwkowtjxcykstlf.supabase.co";
+        // Public (publishable) key, same one the invitation site uses. Data access is
         // enforced in the database: responses are only returned for the right passcode.
-        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxdXV2Y3F4bnl2cndrdG5kZ3JlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2ODQ3ODgsImV4cCI6MjA5OTI2MDc4OH0.k5ofLCsjAoZCkLAIGIKLfS7d-W9sbUJtPQKgkDjOSt0";
+        const SUPABASE_ANON_KEY = "sb_publishable_BFtrH3u_sv9zat6B9SALyw_nS7Pajaa";
+        const AUTH_HEADERS = SUPABASE_ANON_KEY.startsWith("sb_")
+            ? { apikey: SUPABASE_ANON_KEY }
+            : { apikey: SUPABASE_ANON_KEY, Authorization: `Bearer ${SUPABASE_ANON_KEY}` };
         const SESSION_KEY = "wy_dashboard_passcode";
 
         let passcode = "";
@@ -348,8 +351,7 @@
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    apikey: SUPABASE_ANON_KEY,
-                    Authorization: `Bearer ${SUPABASE_ANON_KEY}`
+                    ...AUTH_HEADERS
                 },
                 body: JSON.stringify(body)
             });

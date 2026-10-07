@@ -31657,8 +31657,8 @@ function uF() {
     return t ? parseInt(t[1], 10) <= 18 : !1
 }
 uF() && console.warn("⚠️  Node.js 18 and below are deprecated and will no longer be supported in future versions of @supabase/supabase-js. Please upgrade to Node.js 20 or later. For more information, visit: https://github.com/orgs/supabase/discussions/37217");
-const dF = "https://fquuvcqxnyvrwktndgre.supabase.co",
-    Tw = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZxdXV2Y3F4bnl2cndrdG5kZ3JlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODM2ODQ3ODgsImV4cCI6MjA5OTI2MDc4OH0.k5ofLCsjAoZCkLAIGIKLfS7d-W9sbUJtPQKgkDjOSt0";
+const dF = "https://jcuqwcwkowtjxcykstlf.supabase.co",
+    Tw = "sb_publishable_BFtrH3u_sv9zat6B9SALyw_nS7Pajaa";
 
 function hF(e) {
     return e.startsWith("sb_publishable_") || e.startsWith("sb_secret_")
