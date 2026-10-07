@@ -22473,7 +22473,15 @@ function _8({
                             duration: 1,
                             delay: 1.4
                         },
-                        className: "font-display italic text-base md:text-lg text-black font-medium mt-4 max-w-[22ch] leading-snug whitespace-pre-line",
+                        className: "font-serif mt-4 max-w-[26ch] leading-snug whitespace-pre-line",
+                        style: {
+                            fontSize: "clamp(1rem, 4.2vw, 1.3rem)",
+                            fontWeight: 700,
+                            letterSpacing: "0.22em",
+                            textTransform: "uppercase",
+                            color: "#301918",
+                            textShadow: "0 1px 10px rgba(255,255,255,0.85)"
+                        },
                         children: s
                     }), p.jsx(z.svg, {
                         "aria-hidden": !0,
@@ -22679,7 +22687,13 @@ function B8({
                         className: "font-display text-2xl md:text-3xl text-[hsl(var(--plum))] mb-5",
                         children: o("details.title")
                     }), p.jsx("p", {
-                        className: "font-body text-base md:text-lg text-[hsl(var(--plum))]/90 mb-2 whitespace-pre-wrap",
+                        className: "font-body text-[hsl(var(--plum))] mb-2 whitespace-pre-wrap",
+                        style: {
+                            fontSize: "clamp(1.15rem, 4.6vw, 1.4rem)",
+                            fontWeight: 700,
+                            letterSpacing: "0.12em",
+                            textTransform: "uppercase"
+                        },
                         children: u
                     }), p.jsx("p", {
                         className: "font-serif italic text-[hsl(var(--antique-gold))] text-lg md:text-xl mb-8",
@@ -33842,10 +33856,10 @@ function NB() {
 const OB = 1,
     IB = "bc44ecd3-1d47-4384-97ba-25ed65803916",
     $B = "cc720d6a-88ef-4db6-82b2-9219d43a20b8",
-    DB = "assets/l5e-videos/intro-video.mp4?v=wy20261007",
+    DB = "assets/l5e-videos/intro-video.mp4?v=wy20261007b",
     MB = "a/v1/cc720d6a-88ef-4db6-82b2-9219d43a20b8/bc44ecd3-1d47-4384-97ba-25ed65803916/intro-video.mp4",
     LB = "intro-video.mp4",
-    FB = 2277514,
+    FB = 2689238,
     VB = "video/mp4",
     UB = "2026-07-10T16:05:20Z",
     BB = {
@@ -33862,7 +33876,7 @@ const OB = 1,
     zB = 1,
     WB = "368a6e1c-2ee3-44d6-917b-6e8d2aac0410",
     HB = "cc720d6a-88ef-4db6-82b2-9219d43a20b8",
-    KB = "assets/l5e-images/envelope-frame.jpg?v=wy20261007",
+    KB = "assets/l5e-images/envelope-frame.jpg?v=wy20261007b",
     qB = "a/v1/cc720d6a-88ef-4db6-82b2-9219d43a20b8/368a6e1c-2ee3-44d6-917b-6e8d2aac0410/envelope-frame.jpg",
     GB = "envelope-frame.jpg",
     QB = 943760,
@@ -33959,7 +33973,7 @@ const OB = 1,
                     preload: "auto"
                 }), p.jsx("video", {
                     ref: i2,
-                    src: "assets/l5e-videos/Door_opened_pink_version.mp4?v=wy20261007",
+                    src: "assets/l5e-videos/Door_opened_pink_version.mp4?v=wy20261007b",
                     className: "absolute inset-0 h-full w-full object-cover",
                     style: {
                         opacity: r === "door" ? 1 : 0
