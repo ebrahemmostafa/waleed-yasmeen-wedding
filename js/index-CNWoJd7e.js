@@ -31691,7 +31691,7 @@ function pF() {
             const {
                 data: e,
                 error: t
-            } = await an.from("faqs").select("*").order("sort_order", {
+            } = await an.from("wy_faqs").select("*").order("sort_order", {
                 ascending: !0
             });
             if (t) throw t;
@@ -32738,7 +32738,7 @@ function U9() {
             const {
                 data: e,
                 error: t
-            } = await an.from("guests").select("*").order("created_at", {
+            } = await an.from("wy_guests").select("*").order("created_at", {
                 ascending: !1
             });
             if (t) throw t;
@@ -32752,14 +32752,15 @@ function B9() {
     return W_({
         mutationFn: async t => {
             const {
-                data: n,
+                website: w,
+                ...row
+            } = t;
+            if (w) return null;
+            const {
                 error: r
-            } = await an.functions.invoke("submit-rsvp", {
-                body: t
-            });
+            } = await an.from("wy_guests").insert(row);
             if (r) throw r;
-            if (n && n.error) throw new Error(n.error);
-            return n
+            return null
         },
         onSuccess: () => {
             e.invalidateQueries({
@@ -32775,7 +32776,7 @@ function z9() {
         mutationFn: async t => {
             const {
                 error: n
-            } = await an.from("guests").delete().eq("id", t);
+            } = await an.from("wy_guests").delete().eq("id", t);
             if (n) throw n
         },
         onSuccess: () => {
@@ -34039,7 +34040,7 @@ function tz() {
             const {
                 data: e,
                 error: t
-            } = await an.from("wedding_settings").select("*").maybeSingle();
+            } = await an.from("wy_wedding_settings").select("*").maybeSingle();
             if (t) throw t;
             return e
         }
@@ -34217,7 +34218,7 @@ function KC() {
         const {
             data: f,
             error: w
-        } = await an.from("user_roles").select("role").eq("user_id", h).eq("role", "admin").maybeSingle();
+        } = await an.from("wy_user_roles").select("role").eq("user_id", h).eq("role", "admin").maybeSingle();
         a(!!(!w && f))
     };
     return {
