@@ -22416,6 +22416,11 @@ function _8({
                             delay: .9
                         },
                         className: "font-display italic font-light text-[clamp(3.2rem,10vw,6.5rem)] leading-[0.95] text-[hsl(var(--dusty-blue))] drop-shadow-[0_2px_18px_rgba(255,255,255,0.55)]",
+                        style: {
+                            padding: "0.18em 0.4em",
+                            margin: "-0.18em -0.4em",
+                            overflow: "visible"
+                        },
                         children: [p.jsx("span", {
                             className: "block",
                             children: e
